@@ -71,7 +71,7 @@ function checkExistValues(param){
     let reternV = true;
     for(i=0; i<item.length;i++){
         let existTask = item[i].firstChild.data;
-        console.log('input task: ' + param + ' List item[' + i + '] :' + existTask);
+        //console.log('input task: ' + param + ' List item[' + i + '] :' + existTask);
         if(param == existTask){
             alert(`Task: ${param} is already exsit in the list. Please set a new task.`);
             return reternV = false;
@@ -136,9 +136,9 @@ function getTarget(){
 
     listItems.forEach(item => {
         item.addEventListener('click', function() {
-            // クリックされた <li> 要素を削除
+            // remove element that was clicked.
             if (ul.contains(item)) {
-                console.log(item);
+                //console.log(item);
                 ul.removeChild(item);
             } 
         });
